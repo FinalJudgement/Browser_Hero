@@ -6,13 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browser Hero|TwistGames</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <embed
-      src="themesong.mp3"
-      loop="true"
-      autostart="true"
-      width="2"
-      height="0"
-    />
   </head>
   <body>
     <div class="uiheader">
@@ -61,7 +54,11 @@
         <div class="enemy"></div>
       </div>
     </div>
-
+    <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+    </iframe>
+    <audio id="player" autoplay loop>
+      <source src="themesong.mp3" type="audio/mp3">
+  </audio>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
