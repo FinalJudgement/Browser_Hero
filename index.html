@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browser Hero|TwistGames</title>
     <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src='https://kit.fontawesome.com/008c4b67c6.js' crossorigin='anonymous'></script>
   </head>
   <body>
     <div class="uiheader">
@@ -13,9 +14,9 @@
         <div class="playerChoice" onmouseover="bleep.play()" onmousedown="">
           Go Back To Town
         </div>
-        <div class="playerChoice" onmouseover="bleep.play()" onmousedown="">
-          Fight Level 1 Wolf Puppies
-        </div>
+          <div class="playerChoice" onmouseover="bleep.play()" onmousedown="">
+            Fight Level 1 Wolf Puppies
+          </div>
         <div class="playerChoice" onmouseover="bleep.play()" onmousedown="">
           Scavenge for Items
         </div>
@@ -23,8 +24,14 @@
           Inventory
         </div>
       </div>
-      <h1>Browser Hero Version 1</h1>
+    <h1>Browser Hero Version 1</h1>
+    <audio src="themesong.mp3"></audio>
+  <button id="button">
+    <i class='fas fa-volume-up' style='font-size:36px'></i>
+  </button>
     </div>
+  
+  </div>
     <div class="fight_block">
       <div class="charsetup">
         <div class="charname">Tents R Us</div>
@@ -54,11 +61,6 @@
         <div class="enemy"></div>
       </div>
     </div>
-    <iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
-    </iframe>
-    <audio id="player" autoplay loop>
-      <source src="themesong.mp3" type="audio/mp3">
-  </audio>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="app.js "></script>
   </body>
 </html>

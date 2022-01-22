@@ -1,10 +1,21 @@
 var bleep = new Audio();
 bleep.src = "beep.mp3";
 
-var isChrome =
-  /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-if (!isChrome) {
-  $("#iframeAudio").remove();
-} else {
-  $("#playAudio").remove(); // just to make sure that it will not have 2x audio in the background
-}
+//audio
+const button = document.querySelector("#button");
+const icon = document.querySelector("#button > i");
+const audio = document.querySelector("audio");
+
+button.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.volume = 0.2;
+    audio.play();
+    icon.classList.remove("fa-volume-up");
+    icon.classList.add("fa-volume-mute");
+  } else {
+    audio.pause();
+    icon.classList.remove("fa-volume-mute");
+    icon.classList.add("fa-volume-up");
+  }
+  button.classList.add("fade");
+});
